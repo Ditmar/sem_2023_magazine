@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100&display=swap');
+
+
+@import '../../app/variables';
+@import '../../app/mixins';
+
+/* ... (código anterior) ... */
+
+.carousel {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .subtitulo {
+    margin-bottom: 10px;
+    width: 399px;
+    height: 69px;
+    top: 1329px;
+    left: 633px;
+  
+    h2 {
+      font-family: Montserrat, sans-serif;
+      font-size: 48px;
+      font-weight: 800;
+      line-height: 59px;
+      letter-spacing: 0em;
+      text-align: left;
+      color: #01461D;
+    }
+  }
+  .volume {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 800;
+    line-height: 40px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: #01461D;
+    width: 250px;
+    height: 58px;
+    top: 2129px;
+    left: 749px;
+
+  }
+  .date {
+    font-family: "Lato", sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 15px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: #000000;
+    
+  }
+  
+  img {
+    max-width: 100%;
+    height: 400px;
+    padding: 3%;
+  }  
+      
+  
+  .slider {
+    display: flex;
+    align-items: center;
+    overflow: auto;
+  }
+
+  
+  .arrow {
+    &.disabled {
+      path {
+        fill: #C0C0C0; // Cambia esto al color que desees cuando está deshabilitado
+      }
+    }
+  }
+  .carouselItem {  
+    overflow: hidden; /* Añade overflow: hidden para que las imágenes no sobresalgan */  
+    img {
+      
+      transition: transform 0.3s ease; /* Agrega una transición suave al efecto de transformación */
+    }
+    &:hover {
+      img {
+        transform: scale(1.1); /* Escala la imagen al 110% cuando el mouse está sobre el elemento */
+      }
+    }
+  }
+
+  @include respond-to('large') {
+    /* Estilos específicos para pantallas grandes usando mixins */
+    .arrow-right {
+      display: none;
+    }
+  }
+  @include respond-to('medium') {
+    .subtitulo {
+      width: 100%; /* Ajusta el ancho al 100% para ocupar todo el espacio disponible */
+      text-align: center; /* Centra el texto */
+      h2 {
+        text-align: center;
+        font-size: 40px; /* Ajusta el tamaño del título para 'medium' */
+      }
+    }
+  
+    img {
+      height: 250px; /* Ajusta la altura de las imágenes para 'medium' */
+    }
+  
+    .volume {
+      font-size: 1.8rem; /* Ajusta el tamaño del volumen para 'medium' */
+      line-height: 40px; /* Ajusta la altura de línea del volumen para 'medium' */
+      width: 100%; /* Ajusta el ancho al 100% para ocupar todo el espacio disponible */
+      text-align: center; /* Centra el texto */
+      top: 2129px; /* Ajusta la posición vertical del volumen para 'medium' */
+      left: 633px; /* Ajusta la posición horizontal del volumen para 'medium' */
+    }
+  
+    .date {
+      font-size: 15px; /* Ajusta el tamaño de la fecha para 'medium' */
+      line-height: 15px; /* Ajusta la altura de línea de la fecha para 'medium' */
+      text-align: center; /* Centra el texto */
+    }
+  
+  
+    .arrow-right {
+      right: 20px; /* Ajusta la posición derecha de la flecha derecha para 'medium' */
+    }
+  
+    button {
+      width: 60px; /* Ajusta el ancho del botón para 'medium' */
+      img {
+        height: 60px; /* Ajusta el tamaño de la flecha para 'medium' */
+      }
+    }
+  }
+  @include respond-to('small') {
+    .subtitulo {
+      width: 100%; /* Ajusta el ancho al 100% para ocupar todo el espacio disponible */
+      text-align: center; /* Centra el texto */
+      h2 {
+        font-size: 30px;
+        text-align: center;
+      }
+    }
+    img {
+      height: 160px;
+    }
+
+    .volume {
+      font-size: 14px;
+      line-height: 30px;
+      width: 100%; /* Ajusta el ancho al 100% para ocupar todo el espacio disponible */
+      text-align: center; /* Centra el texto */
+    }
+
+    .date {
+      font-size: 10px; /* Ajusta el tamaño de la fuente */
+      text-align: center; /* Centra el texto */
+    }
+    .arrow {
+      position: relative; /* Cambia la posición a relative */
+      top: -40px; /* Ajusta la posición vertical de las flechas */
+    }
+    .arrow-right {
+      display: none; /* Oculta la flecha derecha en pantallas pequeñas */
+    }
+
+    .arrow {
+      
+      svg {
+        width: 25px; /* Ajusta el ancho del botón */
+        height: 25px; /* Ajusta el tamaño de la flecha */
+      }
+    }
+  }
+}
