@@ -6,7 +6,6 @@
 @import '../../app/variables';
 @import '../../app/mixins';
 
-/* ... (código anterior) ... */
 
 .carousel {
   position: relative;
@@ -80,69 +79,68 @@
     }
   }
   .carouselItem {  
-    overflow: hidden; /* Añade overflow: hidden para que las imágenes no sobresalgan */  
+    overflow: hidden;  
     img {
       
-      transition: transform 0.3s ease; /* Agrega una transición suave al efecto de transformación */
+      transition: transform 0.3s ease;
     }
     &:hover {
       img {
-        transform: scale(1.1); /* Escala la imagen al 110% cuando el mouse está sobre el elemento */
+        transform: scale(1.1);
       }
     }
   }
 
   @include respond-to('large') {
-    /* Estilos específicos para pantallas grandes usando mixins */
     .arrow-right {
       display: none;
     }
   }
   @include respond-to('medium') {
     .subtitulo {
-      width: 100%; /* Ajusta el ancho al 100% para ocupar todo el espacio disponible */
-      text-align: center; /* Centra el texto */
+      width: 100%;
+      text-align: center;
       h2 {
         text-align: center;
-        font-size: 40px; /* Ajusta el tamaño del título para 'medium' */
+        font-size: 40px;
       }
     }
   
     img {
-      height: 250px; /* Ajusta la altura de las imágenes para 'medium' */
+      height: 250px;
     }
   
     .volume {
-      font-size: 1.8rem; /* Ajusta el tamaño del volumen para 'medium' */
-      line-height: 40px; /* Ajusta la altura de línea del volumen para 'medium' */
-      width: 100%; /* Ajusta el ancho al 100% para ocupar todo el espacio disponible */
-      text-align: center; /* Centra el texto */
-      top: 2129px; /* Ajusta la posición vertical del volumen para 'medium' */
-      left: 633px; /* Ajusta la posición horizontal del volumen para 'medium' */
+      font-size: 1.8rem;
+      line-height: 40px;
+      width: 100%;
+      text-align: center;
+      top: 2129px;
+      left: 633px;
     }
   
     .date {
-      font-size: 15px; /* Ajusta el tamaño de la fecha para 'medium' */
-      line-height: 15px; /* Ajusta la altura de línea de la fecha para 'medium' */
-      text-align: center; /* Centra el texto */
+      font-size: 15px;
+      line-height: 15px;
+      text-align: center;
     }
   
   
     .arrow-right {
-      right: 20px; /* Ajusta la posición derecha de la flecha derecha para 'medium' */
+      right: 20px;
     }
   
     button {
-      width: 60px; /* Ajusta el ancho del botón para 'medium' */
+      width: 60px;
       img {
-        height: 60px; /* Ajusta el tamaño de la flecha para 'medium' */
+        height: 60px;
       }
     }
   }
   @include respond-to('small') {
     .subtitulo {
-      width: 100%; /* Ajusta el ancho al 100% para ocupar todo el espacio disponible */
-      text-align: center; /* Centra el texto */
+      width: 100%;
+      text-align: center;
       h2 {
         font-size: 30px;
         text-align: center;
@@ -155,27 +153,27 @@
     .volume {
       font-size: 14px;
       line-height: 30px;
-      width: 100%; /* Ajusta el ancho al 100% para ocupar todo el espacio disponible */
-      text-align: center; /* Centra el texto */
+      width: 100%;
+      text-align: center;
     }
 
     .date {
-      font-size: 10px; /* Ajusta el tamaño de la fuente */
-      text-align: center; /* Centra el texto */
+      font-size: 10px;
+      text-align: center;
     }
     .arrow {
-      position: relative; /* Cambia la posición a relative */
-      top: -40px; /* Ajusta la posición vertical de las flechas */
+      position: relative;
+      top: -40px;
     }
     .arrow-right {
-      display: none; /* Oculta la flecha derecha en pantallas pequeñas */
+      display: none;
     }
 
     .arrow {
       
       svg {
-        width: 25px; /* Ajusta el ancho del botón */
-        height: 25px; /* Ajusta el tamaño de la flecha */
+        width: 25px;
+        height: 25px;
       }
     }
   }
