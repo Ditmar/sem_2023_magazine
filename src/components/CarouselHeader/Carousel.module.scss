@@ -3,10 +3,8 @@
 
 .carousel_image {
   width: 100%;
-  
   @include respond-to('small') {
-    height: 8.688rem;
-                
+    height: 8.688rem;              
   }
   @include respond-to('medium') {
     height: 8.688rem;
@@ -57,9 +55,9 @@
     @include respond-to('medium') {
       height: 1.563rem;
       font-size: 0.938rem;
+
     }
 }
-
 .carrucelCap {
   display: flex;
   align-items: center;
