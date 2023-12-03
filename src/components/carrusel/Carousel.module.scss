@@ -37,16 +37,14 @@
     border-color: 1px rgba(255, 255, 255, 1);
     color:rgba(255, 255, 255, 1);
     padding: 5px;
-    
+    font-size: 15px;
+    //font-family: Roboto;
     @include respond-to('small') {
-      font-size: 15px;
-      //font-family: Roboto;
-      margin-bottom: 12%;
+      margin-bottom: 30px;
 
-        
     }
     @include respond-to('medium') {
-
+      margin-bottom: 30px;
     }
 }
 
@@ -55,15 +53,15 @@
   border-color: 1px rgba(1, 70, 29, 1) ;
   padding: 5px;
   color:rgba(255, 255, 255, 1);
+  font-size: 15px;
+  //font-family: Roboto;
+  
     @include respond-to('small') {
-      font-size: 15px;
-      //font-family: Roboto;
-      margin-bottom: 12%;
-        /*display: flex;*/
+      margin-bottom: 30px;
 
     }
     @include respond-to('medium') {
-
+      margin-bottom: 30px;
     }
 }
 

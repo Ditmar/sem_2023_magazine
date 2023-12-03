@@ -50,7 +50,7 @@
 
 .link {
     
-    
+    text-decoration: none;
     @include respond-to('small') {
         width: 45px;
         height: 45px;
@@ -78,6 +78,7 @@
     font-weight: bolder;
     //font-family: Roboto;
     font-size: 12px;
+
     
     @include respond-to('small') {
         text-align: center;
