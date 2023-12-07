@@ -18,6 +18,13 @@
         background-color: blue;
     }
 }
+.headerSection {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+    width: 90%; 
+}
 .text {
     color: white;
     width: 50%; 

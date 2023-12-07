@@ -2,18 +2,19 @@ import Link from 'next/link';
 import styles from './styles.module.css';
 const Navbar = () => {
     return (
-        <nav className={styles.nav}>
-        <ul>
-            <li>
-                <Link href="/">Home</Link>
-            </li>
-            <li>
-                <Link href="/post">Posts</Link>
-            </li>
-            <li>
-                <Link href="/about">About</Link>
-            </li>
-        </ul>
+        <nav>
+                <Link
+                href="/login"
+                className="btn btn-primary btn-sm"
+                >
+                Iniciar Sesion
+                </Link>
+                <Link
+                href="/register"
+                className="btn btn-primary btn-sm"
+                >
+                Registrarse
+                </Link>
         </nav>
     );
 };

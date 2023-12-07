@@ -1,0 +1,31 @@
+.Button {
+    background-color: #fdfdfd; 
+    display:inline-table;
+    margin: auto;
+    justify-content:center;
+    align-items: center;
+    margin-bottom: 20px;
+    width: 105%;
+}
+
+.ButtonGoogle{
+    background-color: #178435; 
+    display:flex;
+    justify-content:center;
+    padding: 20px;
+    width: 615px;
+    height: 93;
+    border-radius: 28px;
+    font-size: 40px;
+    
+}
+.ButtonFacebook{
+    font-size: 40px;
+    background-color: #178435;  
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    width: 615px;
+    height: 93;
+    border-radius: 28px;
+}
