@@ -50,7 +50,10 @@
 
 .link {
     
-    text-decoration: none;
+    text-decoration: none
+    
+    
+    ;
     @include respond-to('small') {
         width: 45px;
         height: 45px;

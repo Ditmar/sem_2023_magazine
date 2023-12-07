@@ -23,12 +23,12 @@ function renderMenu({ menuTitle, handleCloseMenu }: RenderMenuOptions) {
     <Collapse in={true} timeout={500}>
       <div className={Styles.menu}>
         <MenuList />
-        <IconButton
-          edge="end"
-          aria-label="close-menu"
-          title="Close Menu"
-          onClick={handleCloseMenu}
-        >
+          <IconButton
+            edge="end"
+            aria-label="close-menu"
+            title="Close Menu"
+            onClick={handleCloseMenu}
+          >
           <Image src={closeIcon} alt="Close Menu" className={Styles.buttonx} />
         </IconButton>
       </div>
@@ -51,7 +51,6 @@ export default function MenuTransition() {
   const menuToggleButton = (
     <div className={Styles.containerMenu}>
       <Button
-        variant="contained"
         onClick={handleToggleMenu}
         className={Styles.iconHamburger}
       >
