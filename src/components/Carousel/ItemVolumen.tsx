@@ -20,7 +20,7 @@ const ItemVolumen: React.FC<ItemVolumenProps> = ({ item }) => {
       </a>
       <div className={styles.details}>
         <p className={styles.date}> {item.date}</p>
-        <p className={styles.volume}>Vol: {item.volume}</p>
+        <p className={styles.volume}>Vol.{item.volume}</p>
       </div>
     </div>
   );
