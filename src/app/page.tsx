@@ -1,7 +1,9 @@
-export default function Home() {
-  return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      Main Data
-    </main>
-  )
+'use client'
+
+export default function Home() {    
+    return (
+      <main className="flex flex-col items-center justify-center mt-9" color="red">
+        Main Data
+      </main>
+    )
 }
