@@ -6,6 +6,11 @@ import styles from './styles.module.scss';
 import Years from '../Years/Years';
 import volumenes from '@/data/Volumenes';
 
+import Navbar from '../Navbar'
+
+import CarouselContainer from '../carrusel/CarouselContainer'
+
+import VolumeDate from '../VolumeDate/VolumeDate'
 
 import Navbar from '../Navbar'
 import CarouselContainer from '../CarouselHeader/CarouselContainer'
@@ -45,14 +50,14 @@ const Header = () => {
             {/* <MainNavigation /> */}
             
             <div className={styles.text}>
-            {loading ? (
-            <p>...</p>
-            ) : Vol ? (
-            <Years/>
-            )  :   (
-            <p></p>
-            )}
-            </div>
+                {loading ? (
+                <p>...</p>
+                ) : Vol ? (
+                <Years/>
+                )  :   (
+                <p></p>
+                )}
+            </div>   
         </header>
     );
 };

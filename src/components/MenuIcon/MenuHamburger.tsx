@@ -18,7 +18,7 @@ interface RenderMenuOptions {
 }
 
 
-function renderMenu({ menuTitle, handleCloseMenu }: RenderMenuOptions) {
+function renderMenu({ handleCloseMenu }: RenderMenuOptions) {
   return (
     <Collapse in={true} timeout={500}>
       <div className={Styles.menu}>
