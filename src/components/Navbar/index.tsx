@@ -3,7 +3,11 @@ import styles from './styles.module.scss';
 import Image from 'next/image';
 
 
+<<<<<<< HEAD
 import MenuIcon from '../MenuHamburger'
+=======
+import MenuIcon from '../MenuIcon/MenuHamburger'
+>>>>>>> c3221fb (features(common):changes and fixes according to figma[SEM-2])
 import tupa from 'public/assets/img/icon-tupa.svg'
 import logo from 'public/assets/img/logo.png'
 

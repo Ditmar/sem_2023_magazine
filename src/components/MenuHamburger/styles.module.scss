@@ -10,7 +10,7 @@
         margin: 0;
         text-align: center;
         display: flex;
-        flex-direction: column-reverse;           
+        flex-direction: column-reverse;         
     }
     @include respond-to('medium') {
         bottom: 0;
@@ -30,7 +30,7 @@
     border-bottom: 0.938rem solid;
     border-bottom-color: #01461D;
 
-    @include respond-to('small') {   
+    @include respond-to('small') {  
         z-index: 1;
         bottom: 0;
         position: fixed;
@@ -69,8 +69,6 @@
 }
 
 .buttonx {
-    
-    
     @include respond-to('small') {
         grid-column:span;
         border: none;
