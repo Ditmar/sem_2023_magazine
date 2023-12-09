@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 
 
 interface VolumeDateProps {
@@ -18,12 +18,13 @@ const SingleVolumeDateComponent: React.FC<VolumeDateProps> = ({ date, volume,num
         justifyContent:'space-around'
         }}>
       <h3 style={{  
-        padding: '15px', 
+        padding: '15px 5px', 
         textAlign: 'center',
-        fontSize: '12px',
+        fontSize: '14px',
         color: 'rgba(1, 70, 29, 1)',
         background:'rgba(255, 255, 255, 1)',
-        width:'50%'
+        width:'188px',
+        fontWeight:'bold',
         }}
         >{date}|{volume}|{number}</h3>
     </div>
