@@ -6,6 +6,7 @@ import { useState } from "react";
 import image from "./logo.png";
 import Image from 'next/image'
 import styles from "./styles.module.css";
+import { PasswordField } from "@/components/ButtonPassword/PasswordField";
 
 const LoginPage = () => {
   const [errors, setErrors] = useState<string[]>([]);
@@ -44,21 +45,15 @@ const LoginPage = () => {
         <form onSubmit={handleSubmit}>
           <h2>Email</h2>
           <input
-            type="email"
-            placeholder=""
-            name="email"
-            className="form-control mb-2"
             value={email}
-            onChange={(event) => setEmail(event.target.value)} />
+            type="email"
+            className={styles.inputArea}
+            onChange={(e) => setEmail(e.target.value)}
+                />
           <h2>Contraseña</h2>
-          <input
-            type="password"
-            placeholder=""
-            name="password"
-            className="form-control mb-2"
-            value={password}
-            onChange={(event) => setPassword(event.target.value)} />
+          <PasswordField password={password} setPassword={setPassword} />
           <br />
+          <center>
           <div className={styles.ButtonIniciar}>
             <button
               type="submit"
@@ -67,6 +62,7 @@ const LoginPage = () => {
               INICIAR
             </button>
           </div>
+          </center>
         </form>
 
         {errors.length > 0 && (

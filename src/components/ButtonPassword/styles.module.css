@@ -1,0 +1,22 @@
+.eyeIcon {
+    position:relative;
+    float: right;
+    top: -1.80em;
+    right: 0.8em;
+    display: flex;
+    cursor: pointer;
+  }
+
+  .inputArea {
+    width: 100%;
+    height: 2.5em;
+    line-height: 1.75em;
+    margin-right: 0.5em;
+    padding: 0.625em 1em;
+    font-size: 0.875em;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    outline: none;
+    background-color: #f3f3f4;
+    appearance: none;
+  }

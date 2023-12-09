@@ -24,7 +24,7 @@ const Buttons = () => {
     </center>
     <br />
     <center>
-    <div className={styles.ButtonFacebook}>
+      <div className={styles.ButtonFacebook}>
         <Image
             src={image}
             width={31}
@@ -32,8 +32,8 @@ const Buttons = () => {
             alt="google"
         />
         <button onClick={() => signInWithProvider('facebook')} className='text-white'>Facebook</button>
-    </div>
-    </center>
+      </div>
+      </center>
     </div>
   );
 };

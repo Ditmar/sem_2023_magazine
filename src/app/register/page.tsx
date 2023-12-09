@@ -7,6 +7,16 @@ import image from "./logo.png";
 import Image from 'next/image'
 import styles from "./styles.module.css";
 import Buttons from "@/components/Buttons";
+import { PasswordField } from "@/components/ButtonPassword/PasswordField";
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons'
+library.add(faEye, faEyeSlash)
+import type { AppProps } from 'next/app'
+
+function MyApp({ Component, pageProps }: AppProps) {
+  return <Component {...pageProps} />
+}
+
 
 
 const RegisterPage = () => {
@@ -52,10 +62,9 @@ const RegisterPage = () => {
       setErrors(responseNextAuth.error.split(","));
       return;
     }
-
     router.push("/dashboard");
   };
-
+  
   return (
     <><div className={styles.registerImage}>
       <Image
@@ -69,30 +78,22 @@ const RegisterPage = () => {
         <form onSubmit={handleSubmit}>
           <h2>Nombre</h2>
           <input
-            type="text"
-            placeholder=""
-            name="name"
-            className="form-control mb-2"
-            value={name}
-            onChange={(event) => setName(event.target.value)} />
+                value={name}
+                type="name"
+                className={styles.inputArea}
+                onChange={(e) => setName(e.target.value)}
+                />
           <h2>Email</h2>
           <input
-            type="email"
-            placeholder=""
-            name="email"
-            className="form-control mb-2"
-            value={email}
-            onChange={(event) => setEmail(event.target.value)} />
+                  value={email}
+                  type="email"
+                  className={styles.inputArea}
+                  onChange={(e) => setEmail(e.target.value)}
+                />
           <h2>Contraseña</h2>
-          <input
-            type="password"
-            placeholder=""
-            name="password"
-            className="form-control mb-2"
-            value={password}
-            onChange={(event) => setPassword(event.target.value)} />
+            <PasswordField password={password} setPassword={setPassword} />
           <br />
-          <div className={styles.ButtonIniciar}>
+          <center><div className={styles.ButtonIniciar}>
             <button
               type="submit"
               className="btn btn-primary text-white"
@@ -100,6 +101,7 @@ const RegisterPage = () => {
               INICIAR
             </button>
           </div>
+          </center>
         </form>
 
         {errors.length > 0 && (
