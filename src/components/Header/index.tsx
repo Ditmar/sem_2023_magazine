@@ -1,13 +1,11 @@
 import MainNavigation from '../MainNavigation/MainNavigation'
 import styles from './styles.module.scss'
+//import ArticulosCientificos from '../ArticulosCientificos/ArticulosCientificos'
 const Header = () => {
 
     return (
-        <header className={styles.header}>
-            <MainNavigation />
-            <div className={styles.text}>
-                Header
-            </div>
+        <header >
+            header
         </header>
     )
 }
