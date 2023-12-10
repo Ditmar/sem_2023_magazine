@@ -1,6 +1,6 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { FC, SetStateAction, useState } from "react";
-import styles from "./styles.module.css"
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { FC, SetStateAction, useState } from 'react'
+import styles from './styles.module.css'
 
 interface Props {
   password: string;

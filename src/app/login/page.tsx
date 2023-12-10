@@ -1,81 +1,45 @@
-"use client";
+'use client';
 
-import { signIn } from "next-auth/react";
-import { useRouter } from "next/navigation";
-import { useState } from "react";
-import image from "./logo.png";
-import Image from 'next/image'
-import styles from "./styles.module.css";
-import { PasswordField } from "@/components/ButtonPassword/PasswordField";
+import React, { FC } from 'react';
+import useForm from './useForm'; // Asume que useForm está en el mismo directorio
+import styles from './styles.module.css'
 
-const LoginPage = () => {
-  const [errors, setErrors] = useState<string[]>([]);
-  const [email, setEmail] = useState<string>("");
-  const [password, setPassword] = useState<string>("");
-  const router = useRouter();
+const UserForm: FC = () => {
+    const initialFormState = { name: '', email: '' };
+    const [form, handlerChangeForm, handlerResetForm] = useForm(initialFormState);
 
-  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
-    event.preventDefault();
-    setErrors([]);
-
-    const responseNextAuth = await signIn("credentials", {
-      email,
-      password,
-      redirect: false,
-    });
-
-    if (responseNextAuth?.error) {
-      setErrors(responseNextAuth.error.split(","));
-      return;
+    const handleSubmit = (event: React.FormEvent) => {
+        event.preventDefault();
+        console.log('Form Submitted:', form);
+        handlerResetForm();
     }
 
-    router.push("/dashboard");
-  };
-
-  return (
-    <>
-      <div className={styles.loginImage}>
-        <Image
-          src={image}
-          width={832}
-          height={290}
-          alt="Logo" />
-      </div>
-      <div className={styles.Login}>
-        <form onSubmit={handleSubmit}>
-          <h2>Email</h2>
-          <input
-            value={email}
-            type="email"
-            className={styles.inputArea}
-            onChange={(e) => setEmail(e.target.value)}
+    return (
+        <form onSubmit={handleSubmit} className={styles.Form}>
+            <div className={styles.Login}>
+                <label htmlFor="name">Name:</label>
+                <input 
+                    type="text" 
+                    id="name" 
+                    name="name" 
+                    value={form.name} 
+                    onChange={handlerChangeForm} 
                 />
-          <h2>Contraseña</h2>
-          <PasswordField password={password} setPassword={setPassword} />
-          <br />
-          <center>
-          <div className={styles.ButtonIniciar}>
-            <button
-              type="submit"
-              className="btn btn-primary text-white"
-            >
-              INICIAR
-            </button>
-          </div>
-          </center>
+            </div>
+            <br />
+            <div className={styles.Login}>
+                <label htmlFor="email">Email:</label>
+                <input 
+                    type="email" 
+                    id="email" 
+                    name="email" 
+                    value={form.email} 
+                    onChange={handlerChangeForm} 
+                />
+            </div>
+            <button type="iniciar" className={styles.ButtonIniciar}>INICIAR</button>
         </form>
+    );
+}
 
-        {errors.length > 0 && (
-          <div className="alert alert-danger mt-2">
-            <ul className="mb-0">
-              {errors.map((error) => (
-                <li key={error}>{error}</li>
-              ))}
-            </ul>
-          </div>
-        )}
-      </div>
-    </>
-  );
-};
-export default LoginPage;
+export default UserForm;

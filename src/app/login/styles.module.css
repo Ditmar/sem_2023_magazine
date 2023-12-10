@@ -1,19 +1,23 @@
-.loginImage {
-    background-color: #fdfdfd; 
-    display:flex;
-    margin: auto;
-    justify-content:center;
-    align-items: center;
-    margin-bottom: 20px;
-    width: 105%;
-}
 
-.Login {
+.Form {
     background-color: #fdfdfd;  
-    display: flex;
+    display:inline-table;
     justify-content: center;
     padding: 50px;
-    width: 105%;
+    border: 2px;
+    width: 1728px;
+        left: 580;
+        font-size: 24px;
+   
+}
+.Login {
+    background-color: #fdfdfd;  
+    display:inline-table;
+    justify-content: center;
+    padding: 50px;
+    border: 2px;
+    width: 604px;
+    left: 580;
     font-size: 24px;
 }
 

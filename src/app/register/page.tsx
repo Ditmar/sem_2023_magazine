@@ -1,13 +1,13 @@
 "use client";
 
-import { signIn } from "next-auth/react";
-import { useRouter } from "next/navigation";
-import { useState } from "react";
-import image from "./logo.png";
+import { signIn } from 'next-auth/react';
+import { useRouter } from 'next/navigation';
+import { useState } from 'react';
+import image from './logo.png';
 import Image from 'next/image'
-import styles from "./styles.module.css";
-import Buttons from "@/components/Buttons";
-import { PasswordField } from "@/components/ButtonPassword/PasswordField";
+import styles from './styles.module.css';
+import Buttons from '@/components/Buttons';
+import { PasswordField } from '@/components/ButtonPassword/PasswordField';
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons'
 library.add(faEye, faEyeSlash)
