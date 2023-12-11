@@ -1,0 +1,40 @@
+@import '../../app/_mixins.scss';
+@import '../../app/_variables.scss';
+
+.qwerty{
+    display: flex;
+}
+.buttonyear1 {
+    font-family: Roboto;
+    font-size: 1.2rem;
+    color: #01461D;
+    padding: 0px 10px;
+    background: #ffffff;
+    font-weight: bolder;
+    border-radius: 15%;
+    &:hover {
+        font-weight: bold;
+        background: #01461D;
+        color: #ffffff;
+    }
+}
+.buttonyears{
+    font-family: Roboto;
+    font-size: 24px;
+    height: 10%;
+    @include respond-to('small') {
+        background-color: pink;
+    }
+}
+
+.buttonyears button{
+    padding: 0px 10px;
+    font-size: 1.2rem;
+    font-weight: bolder;
+    &:hover {
+        font-weight: bold;
+        background: #01461D;
+        border-radius: 15%;
+    }
+}
+
