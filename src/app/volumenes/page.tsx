@@ -1,6 +1,5 @@
-
-import volumenes from "@/data/Volumenes"
-import Volume from "./[dateYear]/page"
+//se elimino la importancion por que no era necesaria ya que no la usamos en esta seccion.
+import Volume from './[dateYear]/page'
 
 const Volumes = async () => { 
     
