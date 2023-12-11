@@ -17,7 +17,6 @@ interface RenderMenuOptions {
   handleCloseMenu: () => void;
 }
 
-
 function renderMenu({ handleCloseMenu }: RenderMenuOptions) {
   return (
     <Collapse in={true} timeout={500}>

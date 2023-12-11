@@ -1,9 +1,7 @@
-
 @import '../../app/variables';
 @import '../../app/mixins';
 
 .menu {
-    
     @include respond-to('small') {
         bottom: 0;
         z-index: 2;
@@ -12,43 +10,34 @@
         margin: 0;
         text-align: center;
         display: flex;
-        flex-direction: column-reverse;
-                
+        flex-direction: column-reverse;           
     }
     @include respond-to('medium') {
         bottom: 0;
         z-index: 2;
         position: fixed;
-
         width: 100%;
         margin: 0;
         text-align: center;
         display: flex;
         flex-direction: column-reverse;
     }
-
-
 }
 .containerMenu  {
-    
     width: 100%;
-    height: 31px;
+    height: 1.938rem;
     background: #178435;
-    border-bottom: 15px solid;
+    border-bottom: 0.938rem solid;
     border-bottom-color: #01461D;
 
-    
-    @include respond-to('small') {
-        
+    @include respond-to('small') {   
         z-index: 1;
         bottom: 0;
         position: fixed;
         display: flex;
         align-items: center;
         justify-content: center;
-        padding-bottom: 32px;
-        
-                
+        padding-bottom: 2rem;            
     }
     @include respond-to('medium') {
         z-index: 1;
@@ -57,16 +46,16 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        padding-bottom: 32px;
+        padding-bottom: 2rem;
     }
 }
 .iconHamburger {
     
     @include respond-to('small') {
-        background-color: transparent !important;  
+        background-color: transparent;  
     }
     @include respond-to('medium') {
-        background-color: transparent !important;
+        background-color: transparent;
     }
 }
 .menuIcon {
@@ -85,15 +74,15 @@
     @include respond-to('small') {
         grid-column:span;
         border: none;
-        width: 22px !important;
-        height: 22px !important;
+        width: 1.375rem;
+        height: 1.375rem;
         margin-right: 3%;
     }
     @include respond-to('medium') {
         grid-column:span;
         border: none;
-        width: 23px !important;
-        height: 23px !important;
+        width: 1.375rem;
+        height: 1.375rem;
         margin-right: 3%;
     }    
 }
