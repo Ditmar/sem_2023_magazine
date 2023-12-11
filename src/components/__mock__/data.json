@@ -1,0 +1,70 @@
+
+[
+    {
+      "id": 1,
+      "image": "./__mock__/Rectangle 29.png",
+      "volume": 1,
+      "date": "Enero 27 | 2023"
+    },
+    {
+      "id": 2,
+      "image": "./__mock__/Rectangle 30.png",
+      "volume": 2,
+      "date": "Febrero 27 | 2023"
+    },
+    {
+        "id": 3,
+        "image": "./__mock__/Rectangle 31.png",
+        "volume": 3,
+        "date": "Abril 28 | 2023"
+    },
+    {
+        "id": 4,
+        "image": "./__mock__/Rectangle 27.png",
+        "volume": 4,
+        "date": "Mayo 28 | 2023"
+    },
+    {
+        "id": 5,
+        "image": "./__mock__/Rectangle 28.png",
+        "volume": 5,
+        "date": "Junio 29 | 2023"
+    },
+    {
+      "id": 6,
+      "image": "./__mock__/Rectangle 32.png",
+      "volume": 6,
+      "date": "Agosto 29 | 2023"
+    },
+    {
+      "id": 7,
+      "image": "./__mock__/Rectangle 33.png",
+      "volume": 7,
+      "date": "Septiembre 29 | 2023"
+    },
+    {
+      "id": 8,
+      "image": "./__mock__/Rectangle 34.png",
+      "volume": 8,
+      "date": "Octubre 15 | 2023"
+    },
+    {
+      "id": 9,
+      "image": "./__mock__/Rectangle 35.png",
+      "volume": 9,
+      "date": "Noviembre 2 | 2023"
+    },
+    {
+      "id": 10,
+      "image": "./__mock__/Rectangle 36.png",
+      "volume": 10,
+      "date": "Diciembre 30 | 2023"
+    },
+    {
+      "id": 11,
+      "image": "./__mock__/Rectangle 37.png",
+      "volume": 11,
+      "date": "Diciembre 31 | 2023"
+    }
+]
+  
