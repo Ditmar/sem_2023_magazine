@@ -18,7 +18,11 @@ const Navbar = () => {
                         <Image  src={tupa} alt="tupa icon" />
                     </button>  
                 </div>
+<<<<<<< HEAD
             </div>
+=======
+            </div>  
+>>>>>>> 8f10b52 (feat(common): solution to comments. In styles -px with -rm and remove -important)
         </nav>
     );
 };
