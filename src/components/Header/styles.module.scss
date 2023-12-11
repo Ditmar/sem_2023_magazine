@@ -17,7 +17,7 @@
     width: 100%; 
     margin: 0 auto;
     text-align: center;
-    font-size: 50px;
+    font-size: 3.125rem;
     @include respond-to('small') {
         background-color: rgb(255, 8, 0);
  
@@ -29,9 +29,9 @@
 }
 
 .voldate {
-    height: 80px;
+    height: 5rem;
     width: 100%;
     position: absolute;
-    margin-top: -1.8rem !important;
+    margin-top: -1.8rem ;
 
 }

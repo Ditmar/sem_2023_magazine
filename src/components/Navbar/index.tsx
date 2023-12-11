@@ -20,8 +20,7 @@ const Navbar = () => {
                         <Image  src={tupa} alt="tupa icon" />
                     </button>  
                 </div>
-            </div>
-            
+            </div>  
         </nav>
     );
 };

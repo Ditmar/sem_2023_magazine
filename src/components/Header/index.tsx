@@ -2,12 +2,9 @@
 import Navbar from '../Navbar'
 import styles from './styles.module.scss'
 
-
-//import Carousel from '../carrusel/Carousel'
 import CarouselContainer from '../carrusel/CarouselContainer'
-import  MenuList from '../Menu/MenuList'
-import VolumeDate from '../VolumeDate/VolumeDate'
-import SingleVolumeDatePage from './../VolumeDate/VolumeDate';
+import VolumeDate from '../VolumeDate'
+
 
 
 const Header = () => {
@@ -18,9 +15,6 @@ const Header = () => {
             <div className={styles.voldate}>
                 <VolumeDate />
             </div>
-            
-
-
         </header>
     )
 }
