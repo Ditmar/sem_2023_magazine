@@ -12,9 +12,6 @@ import CarouselContainer from '../carrusel/CarouselContainer'
 
 import VolumeDate from '../VolumeDate/VolumeDate'
 
-import Navbar from '../Navbar'
-import CarouselContainer from '../CarouselHeader/CarouselContainer'
-import VolumeDate from '../VolumeDate'
 
 const Header = () => {
     const pathname = usePathname()
@@ -46,9 +43,7 @@ const Header = () => {
             <div className={styles.voldate}>
                 <VolumeDate />
             </div>
-
-            {/* <MainNavigation /> */}
-            
+            <MainNavigation />
             <div className={styles.text}>
                 {loading ? (
                 <p>...</p>
