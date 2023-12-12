@@ -1,6 +1,6 @@
 
-import volumenes from "@/data/volumenes"
-import VolumenCard from "@/components/volumenes";
+import volumenes from '@/data/volumenes'
+import VolumenCard from '@/components/volumenes';
 
 
 const Volumes = async () => { 
