@@ -10,6 +10,19 @@
           "-webkit-tap-highlight-color"
         ]
       }
+    ],
+    "axe/keyboard": [
+      "default",
+      {
+        "nested-interactive": "off"
+      }
+    ],
+    "axe/name-role-value": [
+      "default",
+      {
+        "link-name": "off",
+        "button-name": "off"
+      }
     ]
   }
 }

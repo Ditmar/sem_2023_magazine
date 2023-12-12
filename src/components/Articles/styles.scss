@@ -168,46 +168,7 @@
     transition: opacity 1050ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
   }
 
-  .image {
-    -webkit-font-smoothing: antialiased;
-    color: rgba(0, 0, 0, 0.87);
-    font-size: 0.875rem;
-    font-family: "Lato-Black", "Montserrat-Ligth", "Montserrat-Bold", "Roboto-Bold", "Lato-Ligth";
-    font-weight: 400;
-    line-height: 1.43;
-    box-sizing: inherit;
-    display: flex;
-    margin-bottom: 2rem;
-    justify-content: center;
-  }
-
-  .grid {
-    -webkit-font-smoothing: antialiased;
-    color: rgba(0, 0, 0, 0.87);
-    font-size: 0.875rem;
-    font-family: "Lato-Black", "Montserrat-Ligth", "Montserrat-Bold", "Roboto-Bold", "Lato-Ligth";
-    font-weight: 400;
-    line-height: 1.43;
-    box-sizing: inherit;
-    display: flex;
-    justify-content: center;
-  }
-
-  .image-article {
-    -webkit-font-smoothing: antialiased;
-    color: rgba(0, 0, 0, 0.87);
-    font-size: 0.875rem;
-    font-family: "Lato-Black", "Montserrat-Ligth", "Montserrat-Bold", "Roboto-Bold", "Lato-Ligth";
-    font-weight: 400;
-    line-height: 1.43;
-    box-sizing: inherit;
-    object-fit: cover;
-    aspect-ratio: 3/4;
-    height: 15rem;
-    width: 300px;
-    height: 400px;
-  }
-
+ 
   .sharebutton {
     -webkit-font-smoothing: antialiased;
     cursor: pointer;
