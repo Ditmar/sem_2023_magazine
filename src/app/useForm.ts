@@ -15,5 +15,4 @@ const useForm = (initForm: FormState) => {
 
     return [form, handlerChangeForm, handlerResetForm];
 }
-
 export default useForm;

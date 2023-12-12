@@ -1,8 +1,8 @@
 import { signIn } from 'next-auth/react';
-import image from "./facebook.png";
-import imageg from "./google.png";
+import image from './facebook.png';
+import imageg from './google.png';
 import Image from 'next/image'
-import styles from "./styles.module.css";
+import styles from './styles.module.css';
 
 const Buttons = () => {
   const signInWithProvider = async (provider: string) => {

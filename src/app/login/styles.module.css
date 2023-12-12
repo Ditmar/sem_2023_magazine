@@ -1,48 +1,59 @@
 
-.Form {
-    background-color: #fdfdfd;  
-    display:inline-table;
+.form {
+    min-height: 100vh;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    display: flex;
+    align-items: center;
     justify-content: center;
-    padding: 50px;
-    border: 2px;
-    width: 1728px;
-        left: 580;
-        font-size: 24px;
-   
+    flex-direction: column;
 }
-.Login {
-    background-color: #fdfdfd;  
-    display:inline-table;
+
+.loginImage {
+    background-position: center;
+    display:flex;
     justify-content: center;
-    padding: 50px;
+    align-items:center;
+    left: 434px; 
+    top: 44px;
+}
+
+.label {
+    background-position: center;
+    justify-content: center;
+    padding: 20px;
     border: 2px;
-    width: 604px;
-    left: 580;
+    width: 77px;
+    height: 33px;
+    left: 572px;
     font-size: 24px;
 }
 
-.ButtonIniciar {
-    background-color: #178435; 
-    display: flex;
+.inputArea {
     justify-content: center;
+    width: 604px;
+    margin: 9px;
+    outline: none;
+    border: none;
+    height: 2rem;
+    background: transparent;
     padding: 20px;
-    width: 362px;
-    height: 49;
-    border-radius: 35px;
-    font-size: 40px;
-    font: Monserrat;
+    border-bottom: 2px solid rgb(189, 187, 187);
 }
 
-.inputArea {
-    width: 604px;
-    height: 2.5em;
-    line-height: 1.75em;
-    margin-right: 0.5em;
-    padding: 0.625em 1em;
-    font-size: 0.875em;
-    border: 1px;
-    border-radius: 8px;
-    outline: none;
-    background-color: #f3f3f4;
-    appearance: none;
-  }
+  .ButtonIniciar {
+    background-position: center;
+    width: 251px;
+    height: 69px;
+    border-radius: 28px;
+    background: var(--2, #178435);
+    color: #FFF;
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 40px;
+    font-weight: 300;
+    line-height: normal;
+    margin: 20px;
+}
+

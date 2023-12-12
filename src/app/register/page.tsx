@@ -1,11 +1,10 @@
-"use client";
+'use client';
 
-import { signIn } from 'next-auth/react';
-import { useRouter } from 'next/navigation';
-import { useState } from 'react';
+import { FC, useState } from 'react';
 import image from './logo.png';
 import Image from 'next/image'
 import styles from './styles.module.css';
+import useForm from '../useForm';
 import Buttons from '@/components/Buttons';
 import { PasswordField } from '@/components/ButtonPassword/PasswordField';
 import { library } from '@fortawesome/fontawesome-svg-core'
@@ -17,104 +16,61 @@ function MyApp({ Component, pageProps }: AppProps) {
   return <Component {...pageProps} />
 }
 
-
-
-const RegisterPage = () => {
-  const [errors, setErrors] = useState<string[]>([]);
-  const [name, setName] = useState<string>("");
-  const [email, setEmail] = useState<string>("");
+  const RegisterPage: FC = () => {
+  const initialFormState = { name: '', email: '' };
+  const [form, handlerChangeForm, handlerResetForm] = useForm(initialFormState);
   const [password, setPassword] = useState<string>("");
-  const router = useRouter();
 
-  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
-    event.preventDefault();
-    setErrors([]);
+  const handleSubmit = (event: React.FormEvent) => {
+      event.preventDefault();
+      console.log('Form Submitted:', form);
+      handlerResetForm();
+  }
 
-    const res = await fetch(
-      `${process.env.NEXT_PUBLIC_BACKEND_URL}/auth/register`,
-      {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          name,
-          email,
-          password,
-        }),
-      }
-    );
-
-    const responseAPI = await res.json();
-
-    if (!res.ok) {
-      setErrors(responseAPI.message);
-      return;
-    }
-
-    const responseNextAuth = await signIn("credentials", {
-      email,
-      password,
-      redirect: false,
-    });
-
-    if (responseNextAuth?.error) {
-      setErrors(responseNextAuth.error.split(","));
-      return;
-    }
-    router.push("/dashboard");
-  };
-  
-  return (
-    <><div className={styles.registerImage}>
-      <Image
-        src={image}
-        width={832}
-        height={290}
-        alt="Logo" />
-    </div>
-    <Buttons />
-    <div className={styles.Register}>
-        <form onSubmit={handleSubmit}>
-          <h2>Nombre</h2>
-          <input
-                value={name}
-                type="name"
-                className={styles.inputArea}
-                onChange={(e) => setName(e.target.value)}
-                />
-          <h2>Email</h2>
-          <input
-                  value={email}
-                  type="email"
-                  className={styles.inputArea}
-                  onChange={(e) => setEmail(e.target.value)}
-                />
-          <h2>Contraseña</h2>
-            <PasswordField password={password} setPassword={setPassword} />
-          <br />
-          <center><div className={styles.ButtonIniciar}>
-            <button
-              type="submit"
-              className="btn btn-primary text-white"
-            >
-              INICIAR
-            </button>
+  return (    
+      <>
+          <div className={styles.loginImage}>
+              <Image
+                  src={image}
+                  width={832}
+                  height={290}
+                  alt="Logo" 
+              />
           </div>
-          </center>
-        </form>
-
-        {errors.length > 0 && (
-          <div className="alert alert-danger mt-2">
-            <ul className="mb-0">
-              {errors.map((error) => (
-                <li key={error}>{error}</li>
-              ))}
-            </ul>
+          <Buttons />
+          <div className={styles.form}>
+              <form onSubmit={handleSubmit}>
+                  <div>
+                      <label htmlFor="name" className={styles.label}>Name</label>
+                      <br />
+                      <input
+                          type="text"
+                          id="name"
+                          name="name"
+                          value={form.name}
+                          onChange={handlerChangeForm}
+                          className={styles.inputArea} />
+                  </div>
+                  <div>
+                      <label htmlFor="email" className={styles.label}>Email</label>
+                      <br />
+                      <input
+                          type="email"
+                          id="email"
+                          name="email"
+                          value={form.email}
+                          onChange={handlerChangeForm}
+                          className={styles.inputArea} />
+                  </div>
+                  <label htmlFor="password" className={styles.label}>Password</label>
+                  <br />
+                  <PasswordField password={password} setPassword={setPassword} />
+                  <br />
+                  <button type="submit" className={styles.ButtonIniciar}>INICIAR</button>
+              </form>
           </div>
-        )}
-      </div></>
-    
+      </>
   );
-};
+}
+
 export default RegisterPage;
