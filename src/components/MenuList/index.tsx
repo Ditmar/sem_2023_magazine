@@ -14,7 +14,7 @@ export default function MenuList() {
           <ul className={styles.nav}>
             <MenuItem href="/articles" src={article} alt="icono de articulo" text="ARTICULOS" />
             <MenuItem href="/" src={ini} alt="icono de inicio" text="INICIO" />
-            <MenuItem href="/vol" src={volumenes} alt="icono de volumenes" text="VOLUMENES" />
+            <MenuItem href="/volumenes" src={volumenes} alt="icono de volumenes" text="VOLUMENES" />
           </ul>
         </div>
     )
