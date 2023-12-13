@@ -2,9 +2,9 @@
 import  React from 'react';
 
 import styles from './styles.module.scss'
-import article from './img/article.svg'
-import ini from './img/inicio.svg'
-import volumenes from './img/vol.svg'
+import article from 'public/assets/img/article.svg'
+import ini from 'public/assets/img/inicio.svg'
+import volumenes from 'public/assets/img/vol.svg'
 import MenuItem from '../menuItem';
 
 export default function MenuList() {
