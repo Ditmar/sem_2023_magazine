@@ -1,0 +1,82 @@
+@import '../../../app/mixins';
+@import '../../../app/variables';
+
+.containerMaps {
+  height: auto;
+  width: auto;
+  margin-left: 1rem;
+
+  .containerGroup {
+    width: auto;
+    height: auto !important;
+  }
+
+  .separator {
+    width: 0.25rem;
+    background-color: #0a6b21;
+    margin-right: 10px;
+
+    @include respond-to('medium') {
+      margin: 0;
+    }
+
+    &.firstSeparator {
+      @include respond-to('small') {
+        display: none;
+        flex-direction: column;
+      }
+    }
+  }
+
+  .list_items {
+    width: auto;
+
+    .title {
+      font-weight: bold;
+      font-size: 1.5rem;
+      color: #0a6b21;
+
+      @include respond-to('medium') {
+        font-size: 0.925rem;
+      }
+    }
+
+    .containerItems {
+      height: auto;
+
+      @include respond-to('medium') {
+        flex-direction: column;
+      }
+
+      @include respond-to('small') {
+        flex-direction: column;
+      }
+
+      padding: 1rem 0;
+
+      .item {
+        height: auto;
+        width: auto;
+        margin-right: 1.5rem;
+        padding: 0.063rem;
+        justify-content: center;
+        align-items: center;
+
+        .imageTwo {
+          width: 0.625rem;
+          height: 0.625rem;
+          border-radius: 50%;
+          margin-right: 0.5rem;
+        }
+
+        .link {
+          color: #0a6b21;
+
+          @include respond-to('medium') {
+            font-size: 0.9rem;
+          }
+        }
+      }
+    }
+  }
+}

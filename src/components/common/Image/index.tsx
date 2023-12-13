@@ -3,7 +3,7 @@ import React from 'react';
 import { ImageInterface } from '@/interfaces/interfacesCommon';
 import styles from './styles.module.scss';
 
-const ReusableImage: React.FC<ImageInterface> = ({ src, alt, className }) => {
+const Image: React.FC<ImageInterface> = ({ src, alt, className }) => {
   return (
     <>
       <img
@@ -15,4 +15,4 @@ const ReusableImage: React.FC<ImageInterface> = ({ src, alt, className }) => {
   );
 };
 
-export default ReusableImage;
+export default Image;

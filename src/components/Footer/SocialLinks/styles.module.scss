@@ -1,0 +1,64 @@
+@import '../../../app/variables';
+@import '../../../app/mixins';
+
+.sectionTwo {
+    width: auto;
+    justify-content: center;
+    align-items: flex-end;
+    margin-top: 1rem;
+
+    @include respond-to('medium') {
+        flex-direction: column;
+        height: auto;
+    }
+
+    @include respond-to('small') {
+        width: 100%;
+        height: auto;
+    }
+
+    .itemContainer {
+        height: auto !important;
+        width: auto;
+
+        @include respond-to('medium') {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .separatorSocial {
+            height: 2rem;
+            width: 0.25rem;
+            background-color: #0a6b21;
+
+            @include respond-to('medium') {
+                width: 8rem;
+                height: 0.25rem;
+                background-color: #0a6b21;
+            }
+        }
+
+        .item {
+            height: auto;
+            width: auto;
+            margin-right: 1.5rem;
+
+            @include respond-to('medium') {
+                margin: 0;
+            }
+
+            .link {
+                color: #0a6b21;
+                justify-content: center;
+                align-items: center;
+
+                .imageThree {
+                    width: 1rem;
+                    height: 2rem;
+                    margin-left: 0.5rem;
+                }
+            }
+        }
+    }
+}

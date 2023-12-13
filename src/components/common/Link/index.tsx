@@ -1,7 +1,7 @@
 import React from "react";
 import { LinkInterface } from "@/interfaces/interfacesCommon";
 import styles from "./styles.module.scss";
-const ReusableLink: React.FC<LinkInterface> = ({
+const Link: React.FC<LinkInterface> = ({
   href,
   target,
   rel,
@@ -20,4 +20,4 @@ const ReusableLink: React.FC<LinkInterface> = ({
   );
 };
 
-export default ReusableLink;
+export default Link;

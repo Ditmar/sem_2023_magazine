@@ -1,5 +1,6 @@
 @import '../../app/variables';
 @import '../../app/mixins';
+
 .footer {
   height: auto !important;
   background-color: #ffffff;
@@ -21,120 +22,6 @@
     @include respond-to('small') {
       width: 100%;
       flex-direction: column;
-    }
-    .imageOne {
-      width: 18rem;
-      height: 6rem;
-      @include respond-to('medium') {
-        width: 8rem;
-        height: 5rem;
-      }
-    }
-    .containerMaps {
-      height: auto;
-      width: auto;
-      .containerGroup {
-        width: auto;
-        height: auto !important;
-      }
-      .separator {
-        width: 0.25rem;
-        background-color: #0a6b21;
-        margin-right: 10px;
-        &.firstSeparator {
-          @include respond-to('small') {
-            display: none;
-            flex-direction: column;
-          }
-        }
-      }
-      .list_items {
-        width: auto;
-        .title {
-          font-weight: bold;
-          font-size: 1.5rem;
-          color: #0a6b21;
-        }
-        .containerItems {
-          height: auto;
-          @include respond-to('medium') {
-            flex-direction: column;
-          }
-          @include respond-to('small') {
-            flex-direction: column;
-          }
-          padding: 1rem 0;
-          .item {
-            height: auto;
-            width: auto;
-            margin-right: 1.5rem;
-            padding: 0.063rem;
-            justify-content: center;
-            align-items: center;
-            .imageTwo {
-              width: 0.625rem;
-              height: 0.625rem;
-              border-radius: 50%;
-              margin-right: 0.5rem;
-            }
-            .link {
-              color: #0a6b21;
-            }
-          }
-        }
-      }
-    }
-  }
-  .sectionTwo {
-    width: auto;
-    justify-content: center;
-    align-items: flex-end;
-    margin-top: 1rem;
-    @include respond-to('medium') {
-      flex-direction: column;
-      height: auto;
-    }
-    @include respond-to('small') {
-      width: 100%;
-      height: auto;
-    }
-    .itemContainer {
-      height: auto !important;
-      width: auto;
-      @include respond-to('medium') {
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-      }
-      .separatorSocial {
-        height: 2rem;
-        width: 0.25rem;
-        background-color: #0a6b21;
-        @include respond-to('medium') {
-          width: 8rem;
-          height: 0.25rem;
-          background-color: #0a6b21;
-        }
-      }
-      .item {
-        height: auto;
-        width: auto;
-        margin-right: 1.5rem;
-        @include respond-to('medium') {
-          margin: 0;
-        }
-
-        .link {
-          color: #0a6b21;
-          justify-content: center;
-          align-items: center;
-          .imageThree {
-            width: 1rem;
-            height: 2rem;
-            margin-left: 0.5rem;
-          }
-        }
-      }
     }
   }
 }
