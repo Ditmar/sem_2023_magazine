@@ -4,7 +4,26 @@ import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import Footer from '@/components/Footer'
 
-const inter = Inter({ subsets: ['latin'] })
+import { Montserrat, Roboto, Lato, } from 'next/font/google';
+const inter = Inter({
+  subsets: ['latin'],
+  display: 'swap',
+});
+const montserrat = Montserrat({
+  weight: '800',
+  subsets: ['latin'],
+  display: 'swap',
+});
+const roboto = Roboto({
+  weight: '700',
+  subsets: ['latin'],
+  display: 'swap',
+});
+const lato = Lato({
+  weight: '100',
+  subsets: ['latin'],
+  display: 'swap',
+});
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -17,12 +36,11 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
+    <html lang="en" className={`${montserrat.className} ${roboto.className} ${lato.className}`}>
       <body className={inter.className}>
         <Header/>
-        <main className="container">
-          {children}  
-        </main>    
+        {/* <Navbar/> */}
+        {children}
         <Footer/>
       </body>
     </html>
