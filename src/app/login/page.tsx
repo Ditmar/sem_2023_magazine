@@ -6,7 +6,7 @@ import styles from './styles.module.css'
 import image from './logo.png';
 import Image from 'next/image'
 
-const LoginPage: React.FC = () => {
+const LoginPage: FC = () => {
     const initialFormState = { name: '', email: '' };
     const [form, handlerChangeForm, handlerResetForm] = useForm(initialFormState);
 
