@@ -1,8 +1,6 @@
 'use client'
 import styles from './styles.module.scss';
 import Image from 'next/image';
-
-
 import MenuIcon from '../MenuHamburger'
 import tupa from 'public/assets/img/icon-tupa.svg'
 import logo from 'public/assets/img/logo.png'

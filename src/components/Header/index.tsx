@@ -1,14 +1,12 @@
 'use client'
 import { useEffect, useState } from 'react';
 import { usePathname} from 'next/navigation'
-import MainNavigation from '../MainNavigation/MainNavigation';
 import styles from './styles.module.scss';
 import Years from '../Years/Years';
 import volumenes from '@/data/Volumenes';
-
-
 import Navbar from '../Navbar'
 import CarouselContainer from '../CarouselHeader/CarouselContainer'
+
 import VolumeDate from '../VolumeDate'
 
 const Header = () => {
@@ -41,9 +39,7 @@ const Header = () => {
             <div className={styles.voldate}>
                 <VolumeDate />
             </div>
-
             {/* <MainNavigation /> */}
-            
             <div className={styles.text}>
             {loading ? (
             <p>...</p>
