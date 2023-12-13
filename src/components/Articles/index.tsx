@@ -20,8 +20,7 @@ const SliderComponent: React.FC = () => {
   useEffect(() => {
     const fetchUserData = async () => {
       try {
-        
-        const url = 'https://jsonplaceholder.typicode.com/comments';
+        const url = `${this.process.env.REACT_APP_BASE_URL}/comments`;
         const data = await getJsonData<UserData[]>(url);
         setUserData(data.slice(0, 12));
       } catch (error) {
