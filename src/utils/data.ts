@@ -1,17 +1,40 @@
+import { socialFollow, resourcesFollow } from '@/interfaces';
+export const resourcesData: resourcesFollow[] = [
+  {
+    title: 'RECURSOS',
+    items: [
+      {
+        name: 'ARTÍCULOS',
+        link: 'https://unipol.edu.bo',
+      },
+      {
+        name: 'VOLÚMENES',
+        link: 'http://revista.repositoriounipol.com/articles',
+      },
+    ],
+  },
+  {
+    title: 'PÁGINA',
+    items: [
+      {
+        name: 'UNIPOL.EDU.BO',
+        link: 'https://tu-rss-feed.com',
+      },
+    ],
+  },
+];
 
-import { faFacebook } from "@fortawesome/free-brands-svg-icons";
-import { faRss } from "@fortawesome/free-solid-svg-icons";
+export const socialData: socialFollow[] = [
+  {
+    title: 'UBICACIÓN',
+    icon: '/img/ubicacion.png',
 
-export const resourcesData = [
-    { title: "RECURSOS", items: ["ARTÍCULOS", "VOLÚMENES"] },
-    { title: "PÁGINA", items: ["UNIPOL.EDU.BO"] },
-  ];
-  
-export   const socialIconsData = [
-    { title: "UBICACIÓN", icon: faRss, link: "https://tu-rss-feed.com" },
-    {
-      title: "SÍGUENOS EN",
-      icon: faFacebook,
-      link: "https://facebook.com/tu-cuenta",
-    },
-  ];
+    link: 'https://tu-rss-feed.com',
+  },
+  {
+    title: 'SÍGUENOS EN',
+
+    icon: '/img/facebook.svg',
+    link: 'https://facebook.com/tu-cuenta',
+  },
+];
