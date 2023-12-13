@@ -4,8 +4,6 @@ import image from "./imagen/Image.jpg";
 import Image from "next/image";
 import React, { useState, useEffect } from 'react';
 import { getJsonData } from '../../app/Async/servicerequest';
-import BtnComponent from "@/components/Articles/components/buttoncomponent";
-import SlideNavigation from "@/components/Articles/components/slidecomponent";
 import ButtonComponent from '@/components/Articles/components/buttoncomponent';
 import Slide from '@/components/Articles/components/slidecomponent';
 
@@ -22,6 +20,7 @@ const SliderComponent: React.FC = () => {
   useEffect(() => {
     const fetchUserData = async () => {
       try {
+        
         const url = 'https://jsonplaceholder.typicode.com/comments';
         const data = await getJsonData<UserData[]>(url);
         setUserData(data.slice(0, 12));
