@@ -6,6 +6,7 @@ import CarouselImage from './CarouselImage';
 import CarouselButtons from './CarouselButtons';
 import imageheader from 'public/assets/img/Rectangle49.png';
 import imageheader2 from 'public/assets/img/Rectangle6.png';
+import Image from 'next/image';
 
 const CarouselContainer = () => {
   return (
