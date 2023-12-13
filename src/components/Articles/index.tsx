@@ -6,7 +6,6 @@ import React, { useState, useEffect } from 'react';
 import { getJsonData } from '../../app/Async/servicerequest';
 import ButtonComponent from '@/components/Articles/components/buttoncomponent';
 import Slide from '@/components/Articles/components/slidecomponent';
-
 interface UserData {
   postId: number;
   id: number;
@@ -14,13 +13,15 @@ interface UserData {
   email: string;
   body: string;
 }
+
 const SliderComponent: React.FC = () => {
   const [userData, setUserData] = useState<UserData[]>([]);
   const [currentSlide, setCurrentSlide] = useState(0);
+
   useEffect(() => {
     const fetchUserData = async () => {
       try {
-        const url = `${this.process.env.REACT_APP_BASE_URL}/comments`;
+        const url = `${process.env.REACT_APP_BASE_API}/comments`;
         const data = await getJsonData<UserData[]>(url);
         setUserData(data.slice(0, 12));
       } catch (error) {
@@ -30,17 +31,21 @@ const SliderComponent: React.FC = () => {
 
     fetchUserData();
   }, []);
+
   const nextSlide = () => {
     setCurrentSlide((prevSlide) => (prevSlide + 1) % userData.length);
   };
+
   const prevSlide = () => {
     setCurrentSlide((prevSlide) => (prevSlide - 1 + userData.length) % userData.length);
   };
+
   const getCurrentDate = () => {
     const options = { year: 'numeric', month: 'long', day: 'numeric' };
     const currentDate = new Date().toLocaleDateString('es-ES', options);
     return currentDate;
   };
+
   return (
     <div className="flex mx-auto  min-h-screen items-top justify-between p-24">
       <div className='grid justify-items-center'>
@@ -60,7 +65,6 @@ const SliderComponent: React.FC = () => {
             </>
           )}
         </div>
-
       </div>
       <div className="w-1/4">
         <div>
