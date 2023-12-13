@@ -1,0 +1,36 @@
+@import '../../app/variables';
+@import '../../app/mixins';
+
+.footer {
+  height: auto !important;
+  background-color: #ffffff;
+  justify-content: space-between;
+  align-items: center;
+  display: inline-flex;
+  padding: 0.5rem;
+
+  @include respond-to('small') {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  @include respond-to('medium') {
+    display: inline;
+    flex-direction: row;
+  }
+
+  .sectionOne {
+    height: auto !important;
+    width: auto;
+    align-items: center;
+    @include respond-to('medium') {
+      display: inline-flex;
+      flex-direction: row;
+    }
+
+    @include respond-to('small') {
+      width: 100%;
+      flex-direction: column;
+    }
+  }
+}
