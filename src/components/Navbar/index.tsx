@@ -1,5 +1,12 @@
-import Link from 'next/link';
-import styles from './styles.module.css';
+'use client'
+import styles from './styles.module.scss';
+import Image from 'next/image';
+
+
+import MenuIcon from '../MenuHamburger'
+import tupa from 'public/assets/img/icon-tupa.svg'
+import logo from 'public/assets/img/logo.png'
+
 const Navbar = () => {
     return (
         <nav >
@@ -13,7 +20,7 @@ const Navbar = () => {
                         <Image  src={tupa} alt="tupa icon" />
                     </button>  
                 </div>
-            </div>
+            </div>  
         </nav>
     );
 };
