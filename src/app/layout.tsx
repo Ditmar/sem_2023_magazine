@@ -40,6 +40,7 @@ export default function RootLayout({
     <html lang="en" className={`${montserrat.className} ${roboto.className} ${lato.className}`}>
       <body className={inter.className}>
         <Header/>
+        {/* <Navbar/> */}
         {children}
         <Footer/>
       </body>
