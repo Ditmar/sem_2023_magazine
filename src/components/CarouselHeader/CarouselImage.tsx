@@ -4,14 +4,14 @@ import Image from 'next/image';
 import styles from './Carousel.module.scss';
 
 interface CarouselImageProps {
-  src: string;
+  image: string;
   alt: string;
 }
 
-const CarouselImage: React.FC<CarouselImageProps> = ({ src, alt }) => {
+const CarouselImage: React.FC<CarouselImageProps> = ({ image, alt }) => {
   return (
     <div className={styles.contentImage}>
-      <Image className={styles.carousel_image} src={src} alt={alt} />
+      <Image className={styles.carousel_image} src={image} alt={alt} />
     </div>
   );
 };

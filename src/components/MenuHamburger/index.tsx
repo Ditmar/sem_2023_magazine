@@ -7,9 +7,9 @@ import IconButton from '@mui/material/IconButton';
 import Image from 'next/image';
 import { TransitionGroup } from 'react-transition-group';
 import Styles from './styles.module.scss';
-import closeIcon from './img/x.svg';
-import menuIcon from './img/iconhamburger..svg';
-import MenuList from './../Menu/MenuList';
+import closeIcon from 'public/assets/img/x.svg';
+import menuIcon from 'public/assets/img/iconhamburger..svg';
+import MenuList from '../MenuList';
 
 
 interface RenderMenuOptions {
