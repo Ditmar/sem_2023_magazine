@@ -1,5 +1,6 @@
 import Navbar from '../Navbar';
 import styles from './styles.module.css';
+
 const MainNavigation = () => {
 
     return (

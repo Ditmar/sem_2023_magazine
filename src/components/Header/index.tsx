@@ -1,3 +1,4 @@
+
 'use client'
 import { useEffect, useState } from 'react';
 import { usePathname} from 'next/navigation'
@@ -5,8 +6,6 @@ import MainNavigation from '../MainNavigation/MainNavigation';
 import styles from './styles.module.scss';
 import Years from '../Years/Years';
 import volumenes from '@/data/Volumenes';
-
-
 
 const Header = () => {
     const pathname = usePathname()
@@ -33,7 +32,9 @@ const Header = () => {
     },[url])
     return (
         <header className={styles.header}>
-            <MainNavigation />
+            <div className={styles.headerSection}>
+                <MainNavigation />
+            </div>
             <div className={styles.text}>
             {loading ? (
             <p>...</p>

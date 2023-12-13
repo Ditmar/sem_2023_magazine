@@ -2,7 +2,6 @@ import Header from '@/components/Header'
 import './globals.css'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
-import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 
 import { Montserrat, Roboto, Lato, } from 'next/font/google';
