@@ -2,9 +2,31 @@ import Header from '@/components/Header';
 import './globals.css';
 import type { Metadata } from 'next';
 
+
 import { Montserrat } from 'next/font/google';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
+
+import { Montserrat, Roboto, Lato, } from 'next/font/google';
+const inter = Inter({
+  subsets: ['latin'],
+  display: 'swap',
+});
+const montserrat = Montserrat({
+  weight: '800',
+  subsets: ['latin'],
+  display: 'swap',
+});
+const roboto = Roboto({
+  weight: '700',
+  subsets: ['latin'],
+  display: 'swap',
+});
+const lato = Lato({
+  weight: '100',
+  subsets: ['latin'],
+  display: 'swap',
+});
 
 const montserrat = Montserrat({ subsets: ['latin'] });
 export const metadata: Metadata = {
@@ -21,6 +43,12 @@ export default function RootLayout({
     <html lang='en'>
       <body className={montserrat.className}>
         <Header />
+
+    <html lang="en" className={`${montserrat.className} ${roboto.className} ${lato.className}`}>
+      <body className={inter.className}>
+        <Header/>
+        {/* <Navbar/> */}
+
         {children}
         <Footer />
       </body>
