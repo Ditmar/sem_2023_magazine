@@ -1,4 +1,4 @@
-import volumenes from "@/data/Volumenes";
+import volumenes from "@/data/volumenes";
 
 const ItemVolumesFilter = ({ params = null }: any) => {
 
